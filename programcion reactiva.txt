@@ -1,0 +1,61 @@
+Programacion Reactiva
+ Es un paradigma la cual se programa de forma en cadenada funcional
+ y esta orientado a flujo de datos osea a (stream),permite la propagacion 
+ del cambio es decir podemos modificar y agregar operadores a nuestro datos y se trabaja 
+ de forma asicrona y saca lo mejor de patron Observer.
+
+ observer:subject->Seria nuestro observable que se encarga de emitir y manejar el flujo de dato
+                   y la propagacion del cambio que se lleva acabo en nuestro flujo para notificar al
+                   observe, para que se pueda notificar primero hay que suscribirse
+
+Stream->flujo de trabajo(tranformacion con super poderes)
+-map-> nos permite tranformar y obtener los queremos 
+-filtra->nos permite filtrar los elementos que cumple dicha condicion
+-delay()-> aplicar retrazos
+-merge -> Nos permite combinar uno mas flujos
+
+DOCUMENTACION
+https://projectreactor.io/||https://projectreactor.io/docs/core/release/reference/#getting
+
+observe= seria el formulario
+
+funciones perezosa
+
+observador= pregunta al observe si hubo cambio
+
+----------------------------------------------------------------------------------------------------
+WebFlux
+Ultiliza la api reactiva en un entorno web, sprin web mvc, asincrono, la persona 
+no tiene que esperar, servidores sin bloqueos eje tomcat, netty
+
+(API Servlet)=>Antes se ultilizaba este container-inconveniente 
+solo request el usuario le toca que esperar si habia una base de 
+datos con cantidad de registro
+
+DEPENDENCIA 
+-Spring Boot DevTools =>Cambio automatico sin reinicia el servidor
+-NoSQL Reactive mongoDB
+-Thymeleaf
+-Spring Reactive Web
+-PODRIAMOS ULTILIZAR CUALQUIER BASE DE DATOS RELACIONAL, PERO EL RESULTADO LO TENDRIAMOS 
+ QUE CONVERTIR EN TIPO REACTIVO EJ: FLUX,MONO,OBSERVABLE OPERADOR JAR
+
+CONTRAPRESION:Nos permite emitir los elementos en blosques dandole un 
+tiempo(ReactiveDataDriverContex),colocar el tiempo: delayElements(Duration.ofSeconds(1);
+
+chunked view names: Se le aplica a las vista que vamos a trabajar con contrapresion, para disminuir el
+tiempo de respuesta, configuracion:properties
+
+---------------------------------------------------------------------------------------------------
+flastMap => Es parecido al map, lo que hace es aplanar y por debajo el mono o el flux 
+lo convierte en el objeto=> esta preparado para trabajar con observable
+
+MONGO DB
+community Server
+ROBOT 3T => INTERFAZ
+
+REPOSITORIOS
+SPRING.IO /SPRING DATA/SPRING DATA MONGODB/CURRENT/WORKING WITH SPRING DATA REPOSITORIES/
+DEFINIR CONSULTA
+
+borrado logico de un estudiante
